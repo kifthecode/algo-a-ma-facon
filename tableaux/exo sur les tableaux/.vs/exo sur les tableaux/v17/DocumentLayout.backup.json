@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\laydi.soilihi\\OneDrive - AMIO\\Bureau\\algo-a-ma-facon\\tableaux\\exo sur les tableaux\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F960C372-2D88-401C-B31D-437811E6FC9C}|Exercice1\\Exercice1.csproj|c:\\users\\laydi.soilihi\\onedrive - amio\\bureau\\algo-a-ma-facon\\tableaux\\exo sur les tableaux\\exercice1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F960C372-2D88-401C-B31D-437811E6FC9C}|Exercice1\\Exercice1.csproj|solutionrelative:exercice1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +27,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\laydi.soilihi\\OneDrive - AMIO\\Bureau\\algo-a-ma-facon\\tableaux\\exo sur les tableaux\\Exercice1\\Program.cs",
+              "RelativeDocumentMoniker": "Exercice1\\Program.cs",
+              "ToolTip": "C:\\Users\\laydi.soilihi\\OneDrive - AMIO\\Bureau\\algo-a-ma-facon\\tableaux\\exo sur les tableaux\\Exercice1\\Program.cs",
+              "RelativeToolTip": "Exercice1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T09:55:45.481Z",
+              "EditorCaption": ""
             }
           ]
         }
