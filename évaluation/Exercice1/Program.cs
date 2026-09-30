@@ -1,6 +1,4 @@
-﻿using System;
-
-// Étape 1 : générer 15 entiers aléatoires entre 1 et 5
+﻿// Étape 1 : générer 15 entiers aléatoires entre 1 et 5
 Random hasard = new Random();
 int[] donnees = new int[15];
 

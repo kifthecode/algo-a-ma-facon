@@ -1,15 +1,30 @@
-﻿
+﻿// Etape 1 : demander la saisi des noms des utilisateur .
+
+string[] Noms = new string[12];
+int nbNoms = 0;
+bool Double = false;
 
 
-// Declaration du tableau
-int[] bulle = { 3, 1, 5, 6, 7, 2, 4, 8 };
-
-// Echanges
-int grand = 8;
-int petit = 1;
-
-
-for (int i = 0; i < bubbleSort.Length; i++)
+while (nbNoms < 12)
 {
-    bulle[i] =
+
+    Console.WriteLine("Saississez les Noms des utilisateur : ");
+    string noms = Console.ReadLine();
+
+    //if (int i = 0; i < nbNoms.Length; int++)
+    //{
+
+    //}
+
 }
+
+//// Etape 2 : Tirage au sort des noms
+
+//Random = new Random;
+//string[] tirageauSort =  ;
+
+
+
+
+
+
