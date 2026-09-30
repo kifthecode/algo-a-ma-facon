@@ -2,19 +2,39 @@
 
 string[] Noms = new string[12];
 int nbNoms = 0;
-bool Double = false;
+bool Doublon = false;
 
 
 while (nbNoms < 12)
 {
 
     Console.WriteLine("Saississez les Noms des utilisateur : ");
-    string noms = Console.ReadLine();
+    string nomSaisi = Console.ReadLine();
 
-    //if (int i = 0; i < nbNoms.Length; int++)
-    //{
+    for (int i = 0; i < nbNoms; i++)
+    {
+        if (Doublon)
+        {
+            Console.Write($" Ce {Noms} existe deja");
+            Doublon = true;
 
-    //}
+        }
+        else if ()
+        {
+
+        }
+        else
+        {
+            break;
+        }
+
+
+    }
+
+}
+
+if (!Doublon)
+{
 
 }
 
