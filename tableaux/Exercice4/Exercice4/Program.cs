@@ -1,47 +1,57 @@
-﻿// Etape 1 : demander la saisi des noms des utilisateur .
-
-string[] Noms = new string[12];
+﻿string[] Noms = new string[12];
 int nbNoms = 0;
-bool Doublon = false;
+
+// Etape 1 : Initialiser le tableau avec des noms uniques .
+Console.WriteLine("Entrez 12 noms");
 
 
-while (nbNoms < 12)
+while (nbNoms < Noms.Length)
 {
 
-    Console.WriteLine("Saississez les Noms des utilisateur : ");
+    Console.WriteLine($"Noms {nbNoms + 1} : ");
     string nomSaisi = Console.ReadLine();
 
-    for (int i = 0; i < nbNoms; i++)
+    // verifier si le nom existe deja
+    if (NomExiste(Noms, nomSaisi))
     {
-        if (Doublon)
-        {
-            Console.Write($" Ce {Noms} existe deja");
-            Doublon = true;
-
-        }
-        else if ()
-        {
-
-        }
-        else
-        {
-            break;
-        }
-
-
+        Console.WriteLine("Ce nom existe deja. il sera ignoré. \n");
+    }
+    else
+    {
+        Noms[nbNoms] = nomSaisi;
+        nbNoms++;
     }
 
 }
 
-if (!Doublon)
-{
+//Tirer un nom au hasard parmi les noms saisis
+Random random = new Random();
+int index = random.Next(0, Noms.Length);
 
+Console.WriteLine($"Nom tiré au hasard : {Noms[index]}");
+
+
+bool NomExiste(string[] Noms, string nom)
+{
+    for (int i = 0; i < Noms.Length; i++)
+    {
+        //Verifier si l'element du tableau est null avant de comparer.
+        if (Noms[i] == null)
+        {
+            return false;
+        }
+
+        // Comparer les noms en ignorant la casse.
+        if (Noms[i].ToUpper() == nom.ToUpper())
+        {
+            return true;
+        }
+    }
+
+    return false;
 }
 
-//// Etape 2 : Tirage au sort des noms
 
-//Random = new Random;
-//string[] tirageauSort =  ;
 
 
 
