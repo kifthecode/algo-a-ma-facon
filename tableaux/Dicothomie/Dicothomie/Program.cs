@@ -1,43 +1,38 @@
-﻿// Etapes 1 : declarer un tableau d'entiers tries par ordre croissant 
-// l'utilisateur doit entrer un index a rechercher dans la console
+﻿int[] tableau = { -6, -2, 4, 7, 22, 76, 123, 456, 789, 1032 };
 
-int[] nombre = { -6, -2, 4, 7, 22, 76, 123, 456, 789, 1032 };
-Console.WriteLine("Entrez L'index a rechercher de 0 a 9 :");
-int valeur = int.Parse(Console.ReadLine());
+Console.Write("Entrez la valeur à chercher : ");
+int valeurCherchee = int.Parse(Console.ReadLine());
 
-// Etape 2 : reponse de la recherche
-int position = (nombre, valeur);
+int resultat = RechercheDichotomique(tableau, valeurCherchee);
 
-
-
-
-
-
-
-
-// Etapes 3 : Recherche dichotomique
-int gauche = 0;
-int droite = longueur - 1;
-
-while (gauche <= droite)
+if (resultat != -1)
 {
-    milieu = (gauche + droite) / 2;
-
-    if ()
-    {
-        t[milieu] == valeur = retourner milieu
-
-            else if t[milieu] < valeur = gauche = milieu + 1;
-
-    }
-
-
-    else
-    {
-
-
-    }
-
-
+    Console.WriteLine($"Valeur trouvée à l'index : {resultat}");
+}
+else
+{
+    Console.WriteLine("Valeur non trouvée.");
 }
 
+int RechercheDichotomique(int[] tab, int valeur)
+{
+    int debut = 0;
+    int fin = tab.Length - 1;
+    while (debut <= fin)
+    {
+        int milieu = (debut + fin) / 2;
+        if (tab[milieu] == valeur)
+        {
+            return milieu;
+        }
+        else if (tab[milieu] < valeur)
+        {
+            debut = milieu + 1;
+        }
+        else
+        {
+            fin = milieu - 1;
+        }
+    }
+    return -1;
+}
