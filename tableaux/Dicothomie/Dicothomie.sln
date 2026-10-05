@@ -1,9 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37614.0 d17.14
+VisualStudioVersion = 17.14.37614.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dicothomie", "Dicothomie\Dicothomie.csproj", "{9CDF8F1D-E4A1-4812-BD1B-06E5BA704E2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I Convertisuer de devise", "..\..\évaluation\I Convertisuer de devise\I Convertisuer de devise.csproj", "{FAA270F8-FD35-4E69-A31D-C7A291EE730F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "II Analyse d'un Tableau de notes", "..\..\évaluation\II Analyse d'un Tableau de notes\II Analyse d'un Tableau de notes.csproj", "{EDBB1846-8521-4E11-8665-93F092402B86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "III Recherche Et suppression", "..\..\évaluation\III Recherche Et suppression\III Recherche Et suppression.csproj", "{EF3B7C66-5DCD-4067-ABF9-1A8823A5B46B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IV Verification de Mot de passe", "..\..\évaluation\IV Verification de Mot de passe\IV Verification de Mot de passe.csproj", "{091C009D-9C3C-4D7F-B536-52655B116B1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V Les 3 plus Grands", "V Les 3 plus Grands\V Les 3 plus Grands.csproj", "{18F5E011-AA47-496E-9561-0C7B5578D743}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VI Sudoku", "..\..\évaluation\VI Sudoku\VI Sudoku.csproj", "{BEA2DD05-A5D3-4FD9-AA1E-7B5BAFBA445A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,30 @@ Global
 		{9CDF8F1D-E4A1-4812-BD1B-06E5BA704E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CDF8F1D-E4A1-4812-BD1B-06E5BA704E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CDF8F1D-E4A1-4812-BD1B-06E5BA704E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA270F8-FD35-4E69-A31D-C7A291EE730F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA270F8-FD35-4E69-A31D-C7A291EE730F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA270F8-FD35-4E69-A31D-C7A291EE730F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA270F8-FD35-4E69-A31D-C7A291EE730F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDBB1846-8521-4E11-8665-93F092402B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDBB1846-8521-4E11-8665-93F092402B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDBB1846-8521-4E11-8665-93F092402B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDBB1846-8521-4E11-8665-93F092402B86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF3B7C66-5DCD-4067-ABF9-1A8823A5B46B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF3B7C66-5DCD-4067-ABF9-1A8823A5B46B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF3B7C66-5DCD-4067-ABF9-1A8823A5B46B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF3B7C66-5DCD-4067-ABF9-1A8823A5B46B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{091C009D-9C3C-4D7F-B536-52655B116B1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{091C009D-9C3C-4D7F-B536-52655B116B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{091C009D-9C3C-4D7F-B536-52655B116B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{091C009D-9C3C-4D7F-B536-52655B116B1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18F5E011-AA47-496E-9561-0C7B5578D743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18F5E011-AA47-496E-9561-0C7B5578D743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18F5E011-AA47-496E-9561-0C7B5578D743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18F5E011-AA47-496E-9561-0C7B5578D743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA2DD05-A5D3-4FD9-AA1E-7B5BAFBA445A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA2DD05-A5D3-4FD9-AA1E-7B5BAFBA445A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA2DD05-A5D3-4FD9-AA1E-7B5BAFBA445A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA2DD05-A5D3-4FD9-AA1E-7B5BAFBA445A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
