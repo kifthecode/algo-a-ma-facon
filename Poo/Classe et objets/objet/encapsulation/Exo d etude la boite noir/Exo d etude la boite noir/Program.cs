@@ -10,7 +10,7 @@ Une propriete peut etre publique en lecture et privée en ecriture : { get; priv
  
 L'encapsulation :
 
-Une boite noire : un mecanisme protégeé a l'interieur, un enesemble de commandes a l'exterieur.
+Une boite noire : un mecanisme protégeé a l'interieur, un ensemble de commandes a l'exterieur.
 Les Methodes publiques controlent les parametres avant de s'en servir : jamais d'accées " en direct " aux données sensibles.
 
 Java : des accesseurs (lecture), des mutateurs (ecritures).
@@ -20,7 +20,7 @@ c# : les propriete, pratique comme un accés direct.
 //La partie garde son score dans sa boite noire.
 var partie = new Partie();
 
-//Chaque annoce passe par la commande publique, qui controle.
+//Chaque annonce passe par la commande publique, qui controle.
 partie.Marquer("A", 4);
 partie.Marquer("B", 6);
 partie.Marquer("B", 6);
