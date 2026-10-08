@@ -53,7 +53,7 @@
 
     public void AddCar(Voiture car)
     {
-        // Garde-fou : évite les doublons et la boucle infinie avec AddOwner
+        // évite les doublons et la boucle infinie avec AddOwner
         if (car == null || this.HasCar(car))
         {
             return;
@@ -74,7 +74,7 @@
 
     public void RemoveCar(Voiture car)
     {
-        // Garde-fou : rien à retirer, ou boucle avec RemoveOwner
+        //  rien à retirer, ou boucle avec RemoveOwner
         if (car == null || !this.HasCar(car))
         {
             return;

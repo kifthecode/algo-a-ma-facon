@@ -68,7 +68,7 @@
     }
 
 
-    // Pas de getter ni de setter : on ne modifie Owner que via AddOwner / RemoveOwner
+    // Pas de getter ni de setter 
     private Person Owner;
     public Voiture(Person owner)
     {
@@ -81,7 +81,7 @@
     // Methodes
     public void AddOwner(Person person)
     {
-        // Garde-fou : personne nulle, ou déjà propriétaire (évite la boucle avec AddCar)
+        // personne nulle, ou déjà propriétaire (évite la boucle avec AddCar)
         if (person == null || this.Owner == person)
         {
             return;
@@ -101,7 +101,7 @@
 
     public void RemoveOwner()
     {
-        // Garde-fou : pas de propriétaire, rien à faire (évite la boucle avec RemoveCar)
+        //pas de propriétaire, rien à faire (évite la boucle avec RemoveCar)
         if (this.Owner == null)
         {
             return;
