@@ -2,10 +2,14 @@
 {
     static int Main()
     {
-        Person john = new Person();
-        john.Name = "Doe";
-        john.FirstName = "John";
-        john.Age = 35;
+
+        Person john;
+        john = new Person();
+
+        //john.Name = "Doe";
+        //john.FirstName = "John";
+        //john.Age = 35;
+
 
 
         Voiture audi = new Voiture();
