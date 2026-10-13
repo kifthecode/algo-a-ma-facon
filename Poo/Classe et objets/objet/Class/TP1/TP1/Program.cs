@@ -5,10 +5,9 @@
 
         Person john;
         john = new Person();
-
-        //john.Name = "Doe";
-        //john.FirstName = "John";
-        //john.Age = 35;
+        john.Name = "Doe";
+        john.FirstName = "John";
+        john.Age = 35;
 
 
 

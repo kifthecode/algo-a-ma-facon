@@ -1,122 +1,89 @@
 ﻿public class Person
 {
-    private string Name;
+    private string _name = "";
     public string GetName()
     {
-        return this.Name;
+        return _name;
     }
     public void SetName(string name)
     {
-        this.Name = name;
+        _name = name;
     }
 
-    private string FirstName;
+    private string _firstName = "";
     public string GetFirstName()
     {
-        return this.FirstName;
+        return _firstName;
     }
     public void SetFirstName(string firstName)
     {
-        this.FirstName = firstName;
+        _firstName = firstName;
     }
 
-
-    private int Age;
+    private int _age;
     public int GetAge()
     {
-        return this.Age;
+        return _age;
     }
     public void SetAge(int age)
     {
-        this.Age = age;
+        // la règle passe AVANT le rangement
+        if (age < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(age), "L'âge ne peut pas être négatif.");
+        }
+        _age = age;
     }
 
-
-    // Pas de getter ni de setter : on ne modifie Cars que via AddCar / RemoveCar
-    private Voiture[] Cars = new Voiture[0];
-
+    // Pas de getter ni de setter : on ne modifie _cars que via AddCar / RemoveCar
+    private List<Voiture> _cars = new List<Voiture>();
 
     // Methodes
-
-    // Vérifie si la voiture est déjà dans le tableau
-    private bool HasCar(Voiture car)
-    {
-        for (int i = 0; i < this.Cars.Length; i++)
-        {
-            if (this.Cars[i] == car)
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public void AddCar(Voiture car)
     {
-        // évite les doublons et la boucle infinie avec AddOwner
-        if (car == null || this.HasCar(car))
+        // garde-fou : évite les doublons et la boucle infinie avec AddOwner
+        if (car == null || _cars.Contains(car))
         {
             return;
         }
 
-        // Nouveau tableau avec une case de plus
-        Voiture[] newCars = new Voiture[this.Cars.Length + 1];
-        for (int i = 0; i < this.Cars.Length; i++)
-        {
-            newCars[i] = this.Cars[i];
-        }
-        newCars[this.Cars.Length] = car;
-        this.Cars = newCars;
+        _cars.Add(car);          // noter
 
-        // On prévient la voiture de son nouveau propriétaire
-        car.AddOwner(this);
+        car.AddOwner(this);      // prévenir la voiture
     }
 
     public void RemoveCar(Voiture car)
     {
-        //  rien à retirer, ou boucle avec RemoveOwner
-        if (car == null || !this.HasCar(car))
+        // garde-fou : rien à retirer, ou boucle avec RemoveOwner
+        if (car == null || !_cars.Contains(car))
         {
             return;
         }
 
-        // Nouveau tableau avec une case de moins, sans la voiture retirée
-        Voiture[] newCars = new Voiture[this.Cars.Length - 1];
-        int index = 0;
-        for (int i = 0; i < this.Cars.Length; i++)
-        {
-            if (this.Cars[i] != car)
-            {
-                newCars[index] = this.Cars[i];
-                index++;
-            }
-        }
-        this.Cars = newCars;
+        _cars.Remove(car);       // noter
 
-        // On prévient la voiture qu'elle n'a plus de propriétaire
-        car.RemoveOwner();
+        car.RemoveOwner();       // prévenir la voiture
     }
 
     public void Print()
     {
-        Console.WriteLine($"Name: {Name}, FirstName: {FirstName}, Age: {Age} ");
+        Console.WriteLine($"Name: {_name}, FirstName: {_firstName}, Age: {_age} ");
 
-        if (this.Cars.Length == 0)
+        if (_cars.Count == 0)
         {
             Console.WriteLine("Voitures : aucune");
             return;
         }
 
         Console.Write("Voitures : ");
-        for (int i = 0; i < this.Cars.Length; i++)
+        for (int i = 0; i < _cars.Count; i++)
         {
-            Console.Write($"{this.Cars[i].GetBrand()} {this.Cars[i].GetModel()}");
-            if (i < this.Cars.Length - 1)
+            Console.Write($"{_cars[i].GetBrand()} {_cars[i].GetModel()}");
+            if (i < _cars.Count - 1)
             {
                 Console.Write(", ");
             }
         }
         Console.WriteLine();
     }
-
 }

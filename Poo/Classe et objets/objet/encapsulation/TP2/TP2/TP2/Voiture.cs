@@ -1,132 +1,130 @@
 ﻿public class Voiture
 {
-    private string Registration;
-
+    private string _registration = "";
     public string GetRegistration()
     {
-        return this.Registration;
+        return _registration;
     }
     public void SetRegistration(string registration)
     {
-        this.Registration = registration;
+        _registration = registration;
     }
 
-    private string Model;
-
+    private string _model = "";
     public string GetModel()
     {
-        return this.Model;
+        return _model;
     }
     public void SetModel(string model)
     {
-        this.Model = model;
+        _model = model;
     }
 
-    private string Brand;
-
+    private string _brand = "";
     public string GetBrand()
     {
-        return this.Brand;
+        return _brand;
     }
     public void SetBrand(string brand)
     {
-        this.Brand = brand;
+        _brand = brand;
     }
 
-    private int KLM;
-
+    private int _klm;
     public int GetKLM()
     {
-        return this.KLM;
+        return _klm;
     }
     public void SetKLM(int klm)
     {
-        this.KLM = klm;
+        if (klm < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(klm), "Le kilométrage ne peut pas être négatif.");
+        }
+        _klm = klm;
     }
 
-    private int Power;
-
+    private int _power;
     public int GetPower()
     {
-        return this.Power;
+        return _power;
     }
     public void SetPower(int power)
     {
-        this.Power = power;
+        if (power < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(power), "La puissance ne peut pas être négative.");
+        }
+        _power = power;
     }
 
-
-    private DateTime OriginalInServiceDate;
-
+    private DateTime _originalInServiceDate;
     public DateTime GetOriginalInServiceDate()
     {
-        return this.OriginalInServiceDate;
+        return _originalInServiceDate;
     }
     public void SetOriginalInServiceDate(DateTime originalInServiceDate)
     {
-        this.OriginalInServiceDate = originalInServiceDate;
+        _originalInServiceDate = originalInServiceDate;
     }
 
+    // Pas de getter ni de setter : le lien ne bouge que par AddOwner / RemoveOwner
+    private Person? _owner;
 
-    // Pas de getter ni de setter 
-    private Person Owner;
     public Voiture(Person owner)
     {
         // Passe par AddOwner pour que la personne reçoive aussi la voiture
-        this.AddOwner(owner);
+        AddOwner(owner);
     }
-
-
 
     // Methodes
     public void AddOwner(Person person)
     {
-        // personne nulle, ou déjà propriétaire (évite la boucle avec AddCar)
-        if (person == null || this.Owner == person)
+        // garde-fou : personne nulle, ou déjà propriétaire (évite la boucle avec AddCar)
+        if (person == null || _owner == person)
         {
             return;
         }
 
         // Si la voiture avait déjà un propriétaire, on la lui retire d'abord
-        if (this.Owner != null)
+        if (_owner != null)
         {
-            this.RemoveOwner();
+            RemoveOwner();
         }
 
-        this.Owner = person;
+        _owner = person;         // noter
 
-        // On prévient la personne qu'elle possède cette voiture
-        person.AddCar(this);
+        person.AddCar(this);     // prévenir la personne
     }
 
     public void RemoveOwner()
     {
-        //pas de propriétaire, rien à faire (évite la boucle avec RemoveCar)
-        if (this.Owner == null)
+        // garde-fou : pas de propriétaire, rien à faire (évite la boucle avec RemoveCar)
+        if (_owner == null)
         {
             return;
         }
 
-        // On met Owner à null AVANT d'appeler RemoveCar pour couper la boucle
-        Person oldOwner = this.Owner;
-        this.Owner = null;
-        oldOwner.RemoveCar(this);
+        // On met _owner à null AVANT d'appeler RemoveCar pour couper la boucle
+        Person ancien = _owner;
+        _owner = null;
+        ancien.RemoveCar(this);
     }
 
     public void Print()
     {
-        Console.WriteLine($"{Brand} {Model} ({Registration})");
-        Console.WriteLine($"Mise en circulation : {OriginalInServiceDate:dd/MM/yyyy}");
-        Console.WriteLine($"{Power} cv, {KLM} km");
+        Console.WriteLine($"{_brand} {_model} ({_registration})");
+        Console.WriteLine($"Mise en circulation : {_originalInServiceDate:dd/MM/yyyy}");
+        Console.WriteLine($"{_power} cv, {_klm} km");
         Console.Write("Propriétaire : ");
 
-        if (this.Owner == null)
+        if (_owner == null)
         {
             Console.WriteLine("aucun");
         }
         else
         {
-            Owner.Print();
+            _owner.Print();
         }
     }
 }

@@ -7,7 +7,6 @@
         john.SetFirstName("John");
         john.SetAge(35);
 
-
         Voiture audi = new Voiture(john);
         audi.SetBrand("Audi");
         audi.SetModel("TT");
@@ -16,12 +15,8 @@
         audi.SetPower(211);
         audi.SetKLM(0);
 
-
-
-
         john.Print();
         audi.Print();
-
 
         // --- Test des nouvelles méthodes ---
         Console.WriteLine();
@@ -38,7 +33,6 @@
         jane.Print();
         audi.Print();
 
-
         Console.WriteLine();
         Console.WriteLine("--- L'Audi n'a plus de propriétaire ---");
 
@@ -46,6 +40,17 @@
 
         jane.Print();
         audi.Print();
+
+        Console.WriteLine();
+        Console.WriteLine("--- Âge négatif refusé ---");
+        try
+        {
+            jane.SetAge(-5);
+        }
+        catch (ArgumentOutOfRangeException e)
+        {
+            Console.WriteLine($"Refusé : {e.Message}");
+        }
 
         return 0;
     }
