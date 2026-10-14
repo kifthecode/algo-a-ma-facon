@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Bases;
+﻿namespace Bases;
 
 class Program
 {
@@ -17,6 +15,9 @@ class Program
         // 3. Créer le point et afficher sa norme
         Point p = new Point(x, y);
         Console.WriteLine($"La norme du point {p} est: {p.Norme()}");
+
+        // test
+
 
     }
 }
