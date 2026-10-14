@@ -27,11 +27,11 @@
 
         // 4. Méthodes
 
-        public Lancer(_aléatoire )
+        public void Lancer()
 
         {
 
-            Valeur.Next = _valeur 1;
+            _valeur = _aléatoire.Next(1, 7);
 
 
             return;
