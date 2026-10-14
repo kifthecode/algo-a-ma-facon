@@ -6,5 +6,15 @@ class Program
     {
 
 
+        Dé de1 = new Dé;
+        Dé de2 = new Dé;
+
+
+
+
+
+
+
+
     }
 }
