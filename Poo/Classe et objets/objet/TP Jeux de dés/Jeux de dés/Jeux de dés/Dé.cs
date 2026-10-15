@@ -38,7 +38,17 @@
 
 
 
+
+
         }
+
+
+
+
+
+
+
+
 
         /*D'accord, donc l'idée est celle-ci : un dé a une valeur, et lancer le dé change cette valeur au hasard entre 1 et 6. Ça aide à clarifier plusieurs choix dans ton code.
 
