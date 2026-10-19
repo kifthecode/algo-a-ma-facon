@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace TP_Cercle;
 
-namespace TP_Cercle
+public class Cercle
 {
-    internal class Cercle
-    {
-    }
+
+    // 1. Champs
+    private Point _centre = null!;
+    private double _rayon;
+
+
+
+    // 2. Propriétés
+
+
+
+    // 3. Constructeurs
+    // 4. Méthodes
+
+
+
+
 }
+
+
