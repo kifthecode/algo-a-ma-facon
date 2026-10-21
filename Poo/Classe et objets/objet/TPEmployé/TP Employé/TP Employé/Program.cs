@@ -10,22 +10,17 @@ class Program
         Console.WriteLine("Nom :");
         string nom = Console.ReadLine();
 
-        Console.WriteLine("prenom :");
+        Console.WriteLine("Prénom :");
         string prenom = Console.ReadLine();
 
-        Console.WriteLine(" Date de naissance :");
+        Console.WriteLine(" Date de naissance (jj/mm/aaaa) :");
         DateTime dateNaissance = DateTime.Parse(Console.ReadLine());
 
-        Console.WriteLine(" Date d embauche :");
+        Console.WriteLine(" Date d'embauche (jj/mm/aaaa) :");
         DateTime dateEmbauche = DateTime.Parse(Console.ReadLine());
 
         Console.WriteLine("Salaire :");
         decimal salaire = decimal.Parse(Console.ReadLine());
-
-
-
-
-
 
 
         Employe Age = new Employe();

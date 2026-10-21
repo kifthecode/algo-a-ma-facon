@@ -42,14 +42,12 @@
 
         // 4. Methodes
 
-        public employe.Age()
-        {
-
-        }
+        // public employe.Age()
 
 
 
 
 
-}
+
+    }
 }
