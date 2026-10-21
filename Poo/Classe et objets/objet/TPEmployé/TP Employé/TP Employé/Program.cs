@@ -4,26 +4,30 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Matricule :");
+        Console.Write("Matricule :");
         int matricule = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Nom :");
+        Console.Write("Nom :");
         string nom = Console.ReadLine();
 
-        Console.WriteLine("Prénom :");
+        Console.Write("Prénom :");
         string prenom = Console.ReadLine();
 
-        Console.WriteLine(" Date de naissance (jj/mm/aaaa) :");
+        Console.Write(" Date de naissance (jj/mm/aaaa) :");
         DateTime dateNaissance = DateTime.Parse(Console.ReadLine());
 
-        Console.WriteLine(" Date d'embauche (jj/mm/aaaa) :");
+        Console.Write(" Date d'embauche (jj/mm/aaaa) :");
         DateTime dateEmbauche = DateTime.Parse(Console.ReadLine());
 
-        Console.WriteLine("Salaire :");
+        Console.Write("Salaire :");
         decimal salaire = decimal.Parse(Console.ReadLine());
 
 
-        Employe Age = new Employe();
+        Employe employe = new Employe(matricule, nom, prenom, dateNaissance, dateEmbauche, salaire);
+        Console.WriteLine(employe.Age());
+
+
+
 
 
 

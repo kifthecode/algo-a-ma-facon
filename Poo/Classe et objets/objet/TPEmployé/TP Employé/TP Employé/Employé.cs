@@ -42,7 +42,23 @@
 
         // 4. Methodes
 
-        // public employe.Age()
+        public int Age()
+        {
+            DateTime today = DateTime.Today;
+            int age = today.Year - _dateNaissance.Year;
+
+            if (_dateNaissance.Date > today.AddYears(-age))
+            {
+                age--;
+            }
+
+            return age;
+        }
+
+        public void Afficher()
+        {
+            Console.WriteLine($"DateNaissance: {_dateNaissance}");
+        }
 
 
 
