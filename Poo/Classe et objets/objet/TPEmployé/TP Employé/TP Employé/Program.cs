@@ -13,6 +13,14 @@ class Program
         Console.WriteLine("prenom :");
         string prenom = Console.ReadLine();
 
+        Console.WriteLine(" Date de naissance :");
+        DateTime dateNaissance = DateTime.Parse(Console.ReadLine());
+
+        Console.WriteLine(" Date d embauche :");
+        DateTime dateEmbauche = DateTime.Parse(Console.ReadLine());
+
+        Console.WriteLine("Salaire :");
+        decimal salaire = decimal.Parse(Console.ReadLine());
 
 
 
