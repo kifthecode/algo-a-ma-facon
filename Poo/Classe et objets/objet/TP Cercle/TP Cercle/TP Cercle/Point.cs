@@ -4,43 +4,43 @@
 public class Point
 {
     // 1. Champs
-    private int _abscisse;
-    private int _ordonnee;
+    private int _x;
+    private int _y;
 
     // 2. Propriétés
-    public int Abscisse
+    public int X
     {
-        get { return _abscisse; }
-        set { _abscisse = value; }
+        get { return _x; }
+        set { _x = value; }
     }
 
-    public int Ordonnee
+    public int Y
     {
-        get { return _ordonnee; }
-        set { _ordonnee = value; }
+        get { return _y; }
+        set { _y = value; }
     }
 
     // 3. Constructeurs
     public Point()
     {
-        _abscisse = 0;
-        _ordonnee = 0;
+        _x = 0;
+        _y = 0;
     }
 
-    public Point(int abscisse, int ordonnee)
+    public Point(int x, int y)
     {
-        _abscisse = abscisse;
-        _ordonnee = ordonnee;
+        _x = x;
+        _y = y;
     }
 
     // 4. Méthodes
     public double Norme()
     {
-        return Math.Sqrt(_abscisse * _abscisse + _ordonnee * _ordonnee);
+        return Math.Sqrt(_x * _x + _y * _y);
     }
 
     public override string ToString()
     {
-        return $"({_abscisse},{_ordonnee})";
+        return $"({_x},{_y})";
     }
 }

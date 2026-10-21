@@ -16,6 +16,10 @@ class Program
         Console.Write("Donner l'ordonnée: ");
         Int32 y = Convert.ToInt32(Console.ReadLine());
 
+        // 3. Lire le Rayon
+        Console.Write("Donner le rayon: ");
+        Int32 rayon = Convert.ToInt32(Console.ReadLine());
+
         // 3. Créer le point et afficher sa norme
         Point p = new Point(x, y);
         Console.WriteLine($"La norme du point {p} est: {p.Norme()}");
