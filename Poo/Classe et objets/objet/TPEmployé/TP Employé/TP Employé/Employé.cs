@@ -55,7 +55,12 @@
             return age;
         }
 
-        public void Afficher()
+
+
+
+
+
+        public void AfficherEmploye()
         {
             Console.WriteLine($"DateNaissance: {_dateNaissance}");
         }

@@ -23,6 +23,8 @@ class Program
         decimal salaire = decimal.Parse(Console.ReadLine());
 
 
+
+
         Employe employe = new Employe(matricule, nom, prenom, dateNaissance, dateEmbauche, salaire);
         Console.WriteLine(employe.Age());
 
