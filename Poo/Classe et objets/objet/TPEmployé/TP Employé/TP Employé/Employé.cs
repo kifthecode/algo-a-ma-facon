@@ -5,7 +5,7 @@
         // 1. Champs
         private int _matricule;
         private string _nom;
-        private string _prénom;
+        private string _prenom;
         private DateTime _dateNaissance;
         private DateTime _dateEmbauche;
         private decimal _salaire;
@@ -27,12 +27,12 @@
 
         // 3. Constructeurs
 
-        public Employe(int matricule, string nom, string prénom, DateTime dateNaissance, DateTime dateEmbauche, decimal salaire)
+        public Employe(int matricule, string nom, string prenom, DateTime dateNaissance, DateTime dateEmbauche, decimal salaire)
         {
 
             Matricule = matricule;
             Nom = nom;
-            Prenom = prénom;
+            Prenom = prenom;
             DateNaissance = dateNaissance;
             DateEmbauche = dateEmbauche;
             Salaire = salaire;
@@ -42,7 +42,14 @@
 
         // 4. Methodes
 
+        public employe.Age()
+        {
+
+        }
 
 
-    }
+
+
+
+}
 }
