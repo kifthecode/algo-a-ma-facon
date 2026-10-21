@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace TP_Employé;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+
+
+
+
+
+    }
+}

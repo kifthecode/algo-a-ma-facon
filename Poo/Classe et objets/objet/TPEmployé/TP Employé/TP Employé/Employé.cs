@@ -1,12 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TP_Employé
+﻿namespace TP_Employé
 {
-    internal class Employé
+    internal class Employe
     {
+        // 1. Champs
+        private int _matricule;
+        private string _nom;
+        private string _prénom;
+        private DateTime _dateNaissance;
+        private DateTime _dateEmbauche;
+        private decimal _salaire;
+
+
+        // 2. Proprietés
+        public int Matricule { get; set; }
+
+        public string Nom { get; set; }
+
+        public string Prenom { get; set; }
+
+        public DateTime DateNaissance { get; set; }
+
+        public DateTime DateEmbauche { get; set; }
+
+        public decimal Salaire { get; set; }
+
+
+        // 3. Constructeurs
+
+        public Employe(int matricule, string nom, string prénom, DateTime dateNaissance, DateTime dateEmbauche, decimal salaire)
+        {
+
+            Matricule = matricule;
+            Nom = nom;
+            Prenom = prénom;
+            DateNaissance = dateNaissance;
+            DateEmbauche = dateEmbauche;
+            Salaire = salaire;
+
+        }
+
+
+        // 4. Methodes
+
+
+
     }
 }
