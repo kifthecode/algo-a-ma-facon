@@ -20,9 +20,13 @@ class Program
         Console.Write("Donner le rayon: ");
         Int32 rayon = Convert.ToInt32(Console.ReadLine());
 
+
+
+
+
         // 3. Créer le point et afficher sa norme
         Point p = new Point(x, y);
-        Console.WriteLine($"La norme du point {p} est: {p.Norme()}");
+        Console.WriteLine($"Le périmetre {p} est: {p.Norme()}");
 
 
 
