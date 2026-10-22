@@ -70,16 +70,22 @@
 
         public decimal AugmentationDuSalaire()
         {
-            if (< 5)
+            int annee = Anciennete();
+            if (annee < 5)
             {
-                Salaire = salaire + Salaire * 2 / 100;
+                Salaire = Salaire + Salaire * 2 / 100;
+
             }
-            else if (< 10)
+            else if (annee < 10)
             {
+
+                Salaire = Salaire + Salaire * 5 / 100;
 
             }
             else
             {
+
+                Salaire = Salaire + Salaire * 10 / 100;
 
             }
 
@@ -90,8 +96,13 @@
 
         public void AfficherEmploye()
         {
+
+
+
+
             Console.WriteLine($"DateNaissance: {_dateNaissance}");
             Console.WriteLine($"DateEmbauche: {_dateEmbauche}");
+            Console.WriteLine($"Salaire: {_salaire}");
         }
 
 
