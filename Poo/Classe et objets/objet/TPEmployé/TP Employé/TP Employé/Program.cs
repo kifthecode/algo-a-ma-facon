@@ -25,8 +25,11 @@ class Program
 
 
 
-        Employe employe = new Employe(matricule, nom, prenom, dateNaissance, dateEmbauche, salaire);
-        Console.WriteLine(employe.Age());
+        Employe e = new Employe(matricule, nom, prenom, dateNaissance, dateEmbauche, salaire);
+        Console.WriteLine(e.Age());
+
+
+
 
 
 

@@ -55,6 +55,28 @@
             return age;
         }
 
+        public int Anciennete()
+        {
+            DateTime today = DateTime.Today;
+            int anciennete = today.Year - _dateEmbauche.Year;
+
+            if (_dateEmbauche.Date > today.AddYears(-anciennete))
+            {
+                anciennete--;
+            }
+
+            return anciennete;
+        }
+
+        public decimal AugmentationDuSalaire()
+        {
+
+
+
+
+
+        }
+
 
 
 
@@ -63,6 +85,7 @@
         public void AfficherEmploye()
         {
             Console.WriteLine($"DateNaissance: {_dateNaissance}");
+            Console.WriteLine($"DateEmbauche: {_dateEmbauche}");
         }
 
 
