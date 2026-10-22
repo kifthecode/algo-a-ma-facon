@@ -103,7 +103,7 @@
         public void AfficherEmploye()
         {
 
-            string prenom = Substring;
+            //  string prenom = Substring;
 
 
             Console.WriteLine($"DateNaissance: {_dateNaissance}");
