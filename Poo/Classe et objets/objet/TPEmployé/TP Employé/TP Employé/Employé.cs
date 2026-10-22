@@ -70,15 +70,21 @@
 
         public decimal AugmentationDuSalaire()
         {
+            if ()
+            {
 
+            }
+            else if ()
+            {
 
+            }
+            else ()
+             {
 
+            }
 
 
         }
-
-
-
 
 
 
