@@ -70,16 +70,16 @@
 
         public decimal AugmentationDuSalaire()
         {
-            if ()
+            if (< 5)
+            {
+                Salaire = salaire + Salaire * 2 / 100;
+            }
+            else if (< 10)
             {
 
             }
-            else if ()
+            else
             {
-
-            }
-            else ()
-             {
 
             }
 
