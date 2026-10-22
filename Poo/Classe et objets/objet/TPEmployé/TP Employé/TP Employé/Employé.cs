@@ -75,17 +75,23 @@
             {
                 Salaire = Salaire + Salaire * 2 / 100;
 
+                return Salaire;
+
             }
             else if (annee < 10)
             {
 
                 Salaire = Salaire + Salaire * 5 / 100;
 
+                return Salaire;
+
             }
             else
             {
 
                 Salaire = Salaire + Salaire * 10 / 100;
+
+                return Salaire;
 
             }
 
