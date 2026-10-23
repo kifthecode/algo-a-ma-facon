@@ -1,28 +1,18 @@
 ﻿namespace TP_Employé
 {
-    internal class Employe
+    class Employe
     {
         // 1. Champs
-        private int _matricule;
-        private string _nom;
-        private string _prenom;
-        private DateTime _dateNaissance;
-        private DateTime _dateEmbauche;
-        private decimal _salaire;
+        public int _matricule { get; set; }
+        public string _nom { get; set; }
+        public string _prenom { get; set; }
+        public DateTime _dateNaissance { get; set; }
+        public DateTime _dateEmbauche { get; set; }
+        public decimal _salaire { get; set; }
 
 
         // 2. Proprietés
-        public int Matricule { get; set; }
 
-        public string Nom { get; set; }
-
-        public string Prenom { get; set; }
-
-        public DateTime DateNaissance { get; set; }
-
-        public DateTime DateEmbauche { get; set; }
-
-        public decimal Salaire { get; set; }
 
 
         // 3. Constructeurs
@@ -30,12 +20,12 @@
         public Employe(int matricule, string nom, string prenom, DateTime dateNaissance, DateTime dateEmbauche, decimal salaire)
         {
 
-            Matricule = matricule;
-            Nom = nom;
-            Prenom = prenom;
-            DateNaissance = dateNaissance;
-            DateEmbauche = dateEmbauche;
-            Salaire = salaire;
+            this.Matricule = matricule;
+            this.Nom = nom;
+            this.Prenom = prenom;
+            this.DateNaissance = dateNaissance;
+            this.DateEmbauche = dateEmbauche;
+            this.Salaire = salaire;
 
         }
 
@@ -103,7 +93,10 @@
         public void AfficherEmploye()
         {
 
-            //  string prenom = Substring;
+            string nom = "".ToUpper();
+            Console.WriteLine("nom");
+
+
 
 
             Console.WriteLine($"DateNaissance: {_dateNaissance}");
