@@ -1,14 +1,19 @@
 ﻿namespace ClassesUtilitaires;
 
-public class TableauxUtils
+public class Random
 {
+    // 1. propriete
 
 
-    public static void HelloWorld()
+    // 2. constructeur
 
-    {
-        Console.WriteLine("Hello World!");
-    }
+
+
+    // 3. methodes
+
+
+
+
 
 
 }
