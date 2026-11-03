@@ -6,16 +6,17 @@ public static class ClassesUtilitaires
 
     public static void Afficher(int[] tableaux)
     {
-        Console.WriteLine("[");
+        Console.Write("[");
 
         for (int i = 0; i < tableaux.Length; i++)
         {
+            Console.Write(tableaux[i]);
             if (int < tableaux - 1)
             {
                 Console.Write(",");
             }
         }
-        Console.WriteLine("]");
+        Console.Write("]");
     }
 
 
