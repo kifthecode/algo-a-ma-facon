@@ -9,7 +9,10 @@ public static class ClassesUtilitaires
      
      for (int i = 0; i<tableaux.Length; i++)
             {
-                
+               if (int < tableaux -1) 
+                 {
+
+                 }
             }
 
 
