@@ -2,13 +2,15 @@
 
 public static class ClassesUtilitaires
 {
-
-
-
-
     // methodes
 
 
+
+     
+     for (int i = 0; i<tableaux.Length; i++)
+            {
+                
+            }
 
 
 
