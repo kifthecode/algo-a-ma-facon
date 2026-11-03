@@ -4,16 +4,22 @@ public static class ClassesUtilitaires
 {
     // methodes
 
+    public static void Afficher(int[] tableaux)
+    {
+        Console.WriteLine("[");
 
-
-     
-     for (int i = 0; i<tableaux.Length; i++)
+        for (int i = 0; i < tableaux.Length; i++)
+        {
+            if (int < tableaux - 1)
             {
-               if (int < tableaux -1) 
-                 {
-
-                 }
+                Console.Write(",");
             }
+        }
+        Console.WriteLine("]");
+    }
+
+
+
 
 
 
