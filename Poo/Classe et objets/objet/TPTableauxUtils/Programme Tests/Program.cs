@@ -22,7 +22,7 @@
                 tableaux[i] = generateur.Next(0, 100);
             }
 
-            TPTableauxUtils.Afficher();
+            ClassesUtilitaires.Afficher(tableaux);
             Console.WriteLine();
 
 

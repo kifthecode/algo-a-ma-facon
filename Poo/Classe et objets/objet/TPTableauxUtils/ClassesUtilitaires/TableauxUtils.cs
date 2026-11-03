@@ -11,7 +11,7 @@ public static class ClassesUtilitaires
         for (int i = 0; i < tableaux.Length; i++)
         {
             Console.Write(tableaux[i]);
-            if (int < tableaux - 1)
+            if (i < tableaux.Length - 1)
             {
                 Console.Write(",");
             }
