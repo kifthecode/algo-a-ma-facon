@@ -8,6 +8,17 @@ public static class ClassesUtilitaires
 
     // methodes
 
+
+
+
+
+
+
+
+
+
+
+
     // 2.
     //Dans la classe utilitaire
     //Vous allez maintenant créer une procédure nommée 
