@@ -58,5 +58,59 @@ public static class ClassesUtilitaires
 
 
 
+
+
+
+
+
+
+
+
+
+
+    //------------------------------------------------------------------------------------
+    // 5.
+    //Vous devez créer une fonction nommée SupprimerValeurTableau.
+    //Cette fonction prend un tableau d'entier en paramètre et renvoi 
+    //un nouveau tableau contenant les mêmes données que le tableau 
+    //passé en paramètre mais en ayant supprimer la valeur à l'indice donné en paramètre.
+    //---------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+    //------------------------------------------------------------------------------------
+    // 6.
+    // Vous devez créer une fonction nommée TableauValeursConsecutives.
+    // Cette fonction doit renvoyé un booléen indiquant si les valeurs du tableau passé
+    // en paramètre sont consécutives (dans le sens croissant ou décroissant).
+    //---------------------------------------------------------------------------------------
+
+
+
+
+
+    //------------------------------------------------------------------------------------
+    // 6.
+    // Vous devez créer une procédure nommée InverserTableau permettant 
+    // d'inverser les éléments d'un tableau passé en paramètre.
+    //---------------------------------------------------------------------------------------
+
+
+
+
+    //------------------------------------------------------------------------------------
+    // 7.
+    //Vous devez créer une fonction nommée FusionTableaux renvoyant un tableau
+    //d'entiers étant le résultat de la fusion de tableaux d'entiers passés en paramètres.
+    //---------------------------------------------------------------------------------------
+
+
+
+
 }
 
