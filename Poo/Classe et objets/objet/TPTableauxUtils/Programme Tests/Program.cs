@@ -43,8 +43,8 @@
 
 
 
-            ClassesUtilitaires.TableauEntiersAleatoires.Afficher();
-
+            int[] tableaux = ClassesUtilitaires.TableauEntiersAleatoires(10);
+            ClassesUtilitaires.Afficher(tableaux);
             Console.WriteLine();
 
 

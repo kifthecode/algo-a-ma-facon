@@ -12,20 +12,21 @@ public static class ClassesUtilitaires
     // // [68,5,30,31,73,55,26,39,59,87]
     //---------------------------------------------------------------------------------------
 
-    //public static void Afficher(int[] tableaux)
-    //{
-    //    Console.Write("[");
+    // Affiche les tableaux des exo
+    public static void Afficher(int[] tableaux)
+    {
+        Console.Write("[");
 
-    //    for (int i = 0; i < tableaux.Length; i++)
-    //    {
-    //        Console.Write(tableaux[i]);
-    //        if (i < tableaux.Length - 1)
-    //        {
-    //            Console.Write(",");
-    //        }
-    //    }
-    //    Console.Write("]");
-    //}
+        for (int i = 0; i < tableaux.Length; i++)
+        {
+            Console.Write(tableaux[i]);
+            if (i < tableaux.Length - 1)
+            {
+                Console.Write(",");
+            }
+        }
+        Console.Write("]");
+    }
 
     //------------------------------------------------------------------------------------
     // 3.
@@ -34,17 +35,20 @@ public static class ClassesUtilitaires
     //être passé en paramètre.
     //---------------------------------------------------------------------------------------
 
-    public static int[] TableauEntiersAleatoires(int[] nombresDeCases)
+    public static int[] TableauEntiersAleatoires(int nombresDeCases)
     {
-        int[] tableaux = new int[10];
+        int[] tableaux = new int[nombresDeCases];
         Random generateur = new Random();
 
-        for (int i = 0; i < nombresDeCases.Length; i++)
+        for (int i = 0; i < tableaux.Length; i++)
         {
-            nombresDeCases[i] = generateur.Next(0, 100);
+
+            tableaux[i] = generateur.Next(0, 100);
         }
-        return nombresDeCases;
+        return tableaux;
     }
+
+
 
     //------------------------------------------------------------------------------------
     // 4.
