@@ -95,7 +95,7 @@ public static class ClassesUtilitaires
 
 
     //------------------------------------------------------------------------------------
-    // 6.
+    // 7.
     // Vous devez créer une procédure nommée InverserTableau permettant 
     // d'inverser les éléments d'un tableau passé en paramètre.
     //---------------------------------------------------------------------------------------
@@ -104,7 +104,7 @@ public static class ClassesUtilitaires
 
 
     //------------------------------------------------------------------------------------
-    // 7.
+    // 8.
     //Vous devez créer une fonction nommée FusionTableaux renvoyant un tableau
     //d'entiers étant le résultat de la fusion de tableaux d'entiers passés en paramètres.
     //---------------------------------------------------------------------------------------
