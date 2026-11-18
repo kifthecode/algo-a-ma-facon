@@ -1,4 +1,4 @@
-﻿public class vecteur2d
+﻿internal class vecteur2d
 {
     public vecteur2d()
     {
