@@ -5,7 +5,17 @@ VisualStudioVersion = 17.14.37614.0 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Select-Where", "Select-Where", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
-		requetes-postgre.sql = requetes-postgre.sql
+		emp-where.sql = emp-where.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jointures", "Jointures", "{DBDBD201-6372-4F0F-9A58-0BEC08358F86}"
+	ProjectSection(SolutionItems) = preProject
+		emp-dept.sql = emp-dept.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fonctions-agregats", "Fonctions-agregats", "{A3C4D3C5-A6F8-48FA-A19E-8F2958E9B103}"
+	ProjectSection(SolutionItems) = preProject
+		Tegroup-by.sql = Tegroup-by.sql
 	EndProjectSection
 EndProject
 Global
