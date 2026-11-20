@@ -47,3 +47,14 @@ select ename, hiredate from emp where hiredate < (select hiredate from emp where
 -- Afficher le nom, la date d’embauche des employés et de leur manager, pour tous les employés ayant été embauchés avant leur manager. Renommez les colonnes pour les différencier.
 
 select e.ename as "Employé", e.hiredate as "Embauche employé", m.ename as "Manager", m.hiredate as "Embauche manager" from emp e join emp m on e.mgr = m.empno where e.hiredate < m.hiredate;
+
+
+-- Afficher la liste des départements qui ne comportent aucun employé.
+
+-- Afficher l’employé qui a le plus gros salaire
+
+-- Afficher la ville du département dans lequel travaille le manager de BLAKE
+
+-- – Dans le département ‘ACCOUNTING’ qui a le salaire le plus faible
+
+-- Qui est le manager du manager de ‘FORD’
