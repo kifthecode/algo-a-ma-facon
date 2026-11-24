@@ -1,39 +1,66 @@
--- OAI - Manipulation des données - Transactions
+-- OAI · Manipulation des données · Transactions (base oai : emp, dept, salgrade)
+-- Schéma supposé :
+--   emp  (empno, ename, job, mgr, hiredate, sal, comm, deptno)
+--   dept (deptno, dname, loc)
+--
+-- DBeaver : passe « Auto » en « Manuel », ou écris BEGIN; comme ci-dessous.
+-- Après une ERREUR, fais ROLLBACK; puis BEGIN; pour débloquer la transaction.
 
+BEGIN;
 
--- Les requêtes ci-après sont susceptibles de modifier l’état des données.
--- Passez en mode SET AUTOCOMMIT = false afin de pouvoir annuler les changements (ROLLBACK) pour conserver vos données dans l’état initial. 
+-- Q1 Nouvel employé dans le département 10 : RÉUSSIT
+INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno)
+VALUES (9001, 'DUPONT', 'CLERK', 7902, CURRENT_DATE, 1000, NULL, 10);
 
+-- Q2 Nouveau département numéro 30 : ERREUR (le 30 existe déjà, clé primaire en double, 23505)
+INSERT INTO dept (deptno, dname, loc)
+VALUES (30, 'INFORMATIQUE', 'LYON');
+ROLLBACK;
+BEGIN;
 
+-- Q3 Nouvel employé dans le département 50 : ERREUR (le 50 n'existe pas, clé étrangère, 23503)
+INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno)
+VALUES (9002, 'MARTIN2', 'CLERK', 7902, CURRENT_DATE, 1000, NULL, 50);
+ROLLBACK;
+BEGIN;
 
--- Parmi les requêtes proposées ci-dessous, certaines testent les contraintes d’intégrité mises en place 
--- dans la base de données et devraient  retourner une erreur à l’exécution. Si tel est le cas, vous relèverez le message et expliquerez la cause de l’erreur.
+-- Q4 Supprimer le département 10 : ERREUR (des employés y travaillent, clé étrangère, 23503)
+DELETE FROM dept
+WHERE deptno = 10;
+ROLLBACK;
+BEGIN;
 
+-- Q5 Affecter BLAKE au département RESEARCH
+UPDATE emp
+SET deptno = (SELECT deptno FROM dept WHERE dname = 'RESEARCH')
+WHERE ename = 'BLAKE';
 
--- Q1 - Insérer un nouvel employé dans le département 10
+-- Q6 Augmenter de 100 € les salariés qui gagnent le minimum
+UPDATE emp
+SET sal = sal + 100
+WHERE sal = (SELECT MIN(sal) FROM emp);
 
--- Q2 - Insérer un nouveau département avec pour numéro de département 30
+-- Q7 Supprimer les départements sans salariés
+DELETE FROM dept d
+WHERE NOT EXISTS (SELECT 1 FROM emp e WHERE e.deptno = d.deptno);
 
--- Q3 - Insérer un nouvel employé dans le département 50
+-- Q8 Augmenter de 100 € les employés qui travaillent à DALLAS
+UPDATE emp
+SET sal = sal + 100
+WHERE deptno IN (SELECT deptno FROM dept WHERE loc = 'DALLAS');
 
--- Q4 - Supprimer le département 10
+-- Contrôle
+SELECT *
+FROM emp;
 
--- Bonus : vous aurez besoin de sous-requêtes pour résoudre ces problèmes.
+SELECT *
+FROM dept;
 
--- Q5 - Affecter l’employé dont le nom est BLAKE au département dont le nom RESEARCH
+-- On annule pour retrouver la base dans son état initial
+ROLLBACK;
+-- (COMMIT; pour garder les changements)
 
--- Q6 - Augmenter de 100€ les salariés qui gagnent le minimum
-
--- Q7 – Supprimer les départements qui n’ont pas de salariés
-
--- Q8 – Augmenter de 100€ les employés qui travaillent à DALLAS
-
--- Q9 - Réaliser les changements ci-après dans une même transaction. Prévoir la possibilité d'annuler ces changements :
-
-      -- Insérer un nouveau département (le numéro 50)
-	  -- Affecter tous les employés du département 20 au département 50
-      -- Supprimer le département 20
-	  -- Vérifier en visualisant le contenu des tables
-      -- Annuler la suppression du département 20
-      -- Valider les changements en suspens pour les rendre permanents
-      -- Vérifier en visualisant le contenu des tables.
+-- Q9 : la liste des changements manque dans le PDF.
+-- BEGIN;
+-- ... changements demandés ...
+-- ROLLBACK; ou COMMIT;
