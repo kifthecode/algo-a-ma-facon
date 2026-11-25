@@ -189,7 +189,7 @@ SELECT volarr FROM vol
 ORDER BY ville;
 
 
--- Q31 -- lister tous les pilotes qui ont ete affecté a un vol qui est parti de PARIS ou bien de PEKIN
+-- Q31 -- lister tous les pilotes qui ont ete affecté a un vol qui est parti de PARIS ou bien de BRUXELLE
 
 SELECT DISTINCT p.pilnom 
 FROM pilote p
@@ -200,5 +200,5 @@ order by pilnom;
 
 
 
--- Q32 -- lister les pilotes qui ont ete a deja affecte a un vol qui est parti de PARIS et aussi a un vol parti de BANCKOC
+-- Q32 -- lister les pilotes qui ont ete a deja affecte a un vol qui est parti de PARIS et aussi a un vol parti de BRUXELLE
 
