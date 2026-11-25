@@ -149,7 +149,7 @@ JOIN vol v ON v.pilno = p.pilno
 WHERE v.voldep = p.piladr
    OR v.volarr = p.piladr;
 
--- Q26 Pilotes ayant un homonyme (un autre pilote avec le même nom)
+-- Q26 Pilotes ayant un homonyme (un autre pilote avec le même nom) erreur il doit avoir 15 au lieu de 18 
 SELECT p.pilno, p.pilnom
 FROM pilote p
 WHERE EXISTS (SELECT 1

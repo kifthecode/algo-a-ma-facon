@@ -1,6 +1,6 @@
 -- OAI · Manipulation des données · Transactions (base oai : emp, dept, salgrade)
 -- Schéma supposé :
---   emp  (empno, ename, job, mgr, hiredate, sal, comm, deptno)
+--  emp  (empno, ename, job, mgr, hiredate, sal, comm, deptno)
 --   dept (deptno, dname, loc)
 --
 -- DBeaver : passe « Auto » en « Manuel », ou écris BEGIN; comme ci-dessous.
