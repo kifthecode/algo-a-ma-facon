@@ -187,3 +187,18 @@ SELECT voldep FROM vol
 UNION
 SELECT volarr FROM vol
 ORDER BY ville;
+
+
+-- Q31 -- lister tous les pilotes qui ont ete affecté a un vol qui est parti de PARIS ou bien de PEKIN
+
+SELECT DISTINCT p.pilnom 
+FROM pilote p
+JOIN vol v ON v.pilno = p.pilno
+WHERE v.voldep = 'PARIS'
+or v.voldep = 'PEKIN'
+order by pilnom;
+
+
+
+-- Q32 -- lister les pilotes qui ont ete a deja affecte a un vol qui est parti de PARIS et aussi a un vol parti de BANCKOC
+
